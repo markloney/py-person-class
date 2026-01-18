@@ -17,7 +17,8 @@ def create_person_list(people_list: list) -> list:
             Person.people.get(people_item["name"]).wife \
                 = Person.people.get(people_item["wife"])
 
-        elif people_item.get("husband") and people_item.get("husband") is not None:
+        elif people_item.get("husband") and \
+                people_item.get("husband") is not None:
             Person.people.get(people_item["name"]).husband \
                 = Person.people.get(people_item["husband"])
 
