@@ -13,11 +13,11 @@ def create_person_list(people_list: list) -> list:
 
     for people_item in people_list:
 
-        if "wife" in people_item and people_item["wife"] is not None:
+        if people_item.get("wife") and people_item.get("wife") is not None:
             Person.people.get(people_item["name"]).wife \
                 = Person.people.get(people_item["wife"])
 
-        elif "husband" in people_item and people_item["husband"] is not None:
+        elif people_item.get("husband") and people_item.get("husband") is not None:
             Person.people.get(people_item["name"]).husband \
                 = Person.people.get(people_item["husband"])
 
